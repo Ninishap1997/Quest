@@ -11,7 +11,7 @@
             string king = Console.ReadLine();
             Console.WriteLine($"{king} - ответ неверный.Слава Менелаю, нашему великому царю!");
             Console.WriteLine($"{name}, напиши любое значение для вручения почетной грамоты!");
-            string age = Console.ReadLine();
+            string thankYou = Console.ReadLine();
             Console.WriteLine($"Грамота - Спасибо тебе воин, {name}!");
         }
     }
