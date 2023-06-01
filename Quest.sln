@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KtoTiVoin", "KtoTiVoin\KtoTiVoin.csproj", "{FEEBFFF6-2233-4446-8985-DE86BC9CD7AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp6", "ConsoleApp6\ConsoleApp6.csproj", "{E772FDEC-3B23-4C22-AA1C-912DF2F0B32D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ivan", "ConsoleApp6\Ivan.csproj", "{E772FDEC-3B23-4C22-AA1C-912DF2F0B32D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
