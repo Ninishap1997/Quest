@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FD795159-7127-49A6-8DB2-C650D5D522C9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KtoTiVoin", "KtoTiVoin\KtoTiVoin.csproj", "{FEEBFFF6-2233-4446-8985-DE86BC9CD7AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Picture", "Picture\Picture.csproj", "{49ADBEFC-0E0E-45B9-B17F-5E7249B4875A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FD795159-7127-49A6-8DB2-C650D5D522C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD795159-7127-49A6-8DB2-C650D5D522C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD795159-7127-49A6-8DB2-C650D5D522C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD795159-7127-49A6-8DB2-C650D5D522C9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FEEBFFF6-2233-4446-8985-DE86BC9CD7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEEBFFF6-2233-4446-8985-DE86BC9CD7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEEBFFF6-2233-4446-8985-DE86BC9CD7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEEBFFF6-2233-4446-8985-DE86BC9CD7AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49ADBEFC-0E0E-45B9-B17F-5E7249B4875A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49ADBEFC-0E0E-45B9-B17F-5E7249B4875A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49ADBEFC-0E0E-45B9-B17F-5E7249B4875A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49ADBEFC-0E0E-45B9-B17F-5E7249B4875A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
