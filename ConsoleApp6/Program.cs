@@ -5,11 +5,14 @@
         static void Main(string[] args)
         {
             string name = "Грозный";
-            string secondName = "Иван";
-            Console.WriteLine($"Так неправильно {name} {secondName}");
-            name = "Иван";
-            secondName = "Грозный";
-            Console.WriteLine($"Так правильно {name} {secondName}");
+            string surname = "Иван";
+            Console.WriteLine($"Так неправильно {name} {surname}");
+            Console.WriteLine("Необходимо исправить ошибку.");
+            Console.WriteLine("Введите имя");
+            name = Console.ReadLine();
+            Console.WriteLine("Введите фамилию");
+            surname = Console.ReadLine();
+            Console.WriteLine($"Так правильно {name} {surname}");
         }
     }
 }
