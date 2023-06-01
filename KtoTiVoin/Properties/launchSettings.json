@@ -6,6 +6,10 @@
     "WSL": {
       "commandName": "WSL2",
       "distributionName": ""
+    },
+    "Профиль 1": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Обучение\\Путь FullStack самурая\\Back\\Проекты\\Quest\\ConsoleApp6\\Program.cs"
     }
   }
 }
