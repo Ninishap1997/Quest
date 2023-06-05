@@ -4,16 +4,16 @@
     {
         static void Main(string[] args)
         {
-            int waitingTimePatien = 10;
-            int minutesHour = 60;
+            int waitingTimePatient = 10;
+            int minutesInHour = 60;
 
             Console.WriteLine("Рассчет времени просиживания штанов");
             Console.WriteLine("Сколько перед Вами человек?");
 
-            string person = Console.ReadLine();
-            int generalTime = Convert.ToInt32(person) * waitingTimePatien;
-            int waitingMinutes = generalTime % minutesHour;
-            int waitingHours = generalTime / minutesHour;
+            string persons = Console.ReadLine();
+            int generalTime = Convert.ToInt32(persons) * waitingTimePatient;
+            int waitingMinutes = generalTime % minutesInHour;
+            int waitingHours = generalTime / minutesInHour;
 
             Console.WriteLine($"Осталось ждать: {waitingHours} час {waitingMinutes} минут ");
         }
