@@ -5,20 +5,20 @@
 
         static void Main(string[] args)
         {
-            Random number = new Random();
-            int gold = number.Next();
-            int course = 2;
+            Random random = new Random();
+            int gold = random.Next();
+            int priceCrystal = 2;
 
             Console.WriteLine($"Золота в инвентаре: {gold}");
             Console.WriteLine("Чтобы приобрести товар, вам необходимо обменять золото на кристаллы");
             Console.WriteLine("Какое количество кристаллов вы хотите приобрести?");
 
-            string crystal = Console.ReadLine();
-            int courseCrystal = Convert.ToInt32(crystal) * course;
-            gold = gold - courseCrystal;
+            string crystals = Console.ReadLine();
+            int courseCrystals = Convert.ToInt32(crystals) * priceCrystal;
+            gold -= gold - courseCrystals;
 
             Console.WriteLine("Поздравляю! Вы купили разрабам обед из омаров!");
-            Console.WriteLine($"Ваш баланс: кристаллы {crystal}, золото {gold}!");
+            Console.WriteLine($"Ваш баланс: кристаллы {crystals}, золото {gold}!");
         }
     }
 }
