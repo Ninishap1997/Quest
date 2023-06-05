@@ -6,12 +6,14 @@
         {
             string name = "Грозный";
             string surname = "Иван";
+
             Console.WriteLine($"Так неправильно {name} {surname}");
             Console.WriteLine("Необходимо исправить ошибку.");
-            Console.WriteLine("Введите имя");
-            name = Console.ReadLine();
-            Console.WriteLine("Введите фамилию");
-            surname = Console.ReadLine();
+
+            string replacement = name;
+            name = surname;
+            surname = replacement;
+
             Console.WriteLine($"Так правильно {name} {surname}");
         }
     }
