@@ -4,12 +4,13 @@
     {
         static void Main(string[] args)
         {
-            int row = 3;
-            int picture = 52;
-            int pictureMax = picture / row;
-            int remains = picture % row;
-            Console.WriteLine($"Заполнено рядов {pictureMax}");
-            Console.WriteLine($"Остаток {remains}");
+            int zonePicture = 3;
+            int totalPictures = 52;
+            int completedZone = totalPictures / zonePicture;
+            int remainsPicture = totalPictures % zonePicture;
+
+            Console.WriteLine($"Заполнено рядов {completedZone}");
+            Console.WriteLine($"Остаток {remainsPicture}");
         }
     }
-}
+} 
