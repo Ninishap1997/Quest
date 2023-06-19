@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             int step = 7;
+            int startCycle = 5;
+            int endCycle = 96;
 
-            for (int i = 5; i < 100; i += step)
+            for (int i = startCycle; i <= endCycle; i += step)
             {
                 Console.WriteLine(i);
             }
