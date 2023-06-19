@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital", "Hospital\Hospit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repeat", "Repeat\Repeat.csproj", "{5A5DE9DD-3654-4AF7-9039-53443672F4E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cycle", "Cycle\Cycle.csproj", "{2F92AB09-33E7-408E-877C-B8D9802A0862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cycle", "Cycle\Cycle.csproj", "{2F92AB09-33E7-408E-877C-B8D9802A0862}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopWord", "StopWord\StopWord.csproj", "{3AECBB5D-C9AC-4498-B26B-D426BD767F77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StopWord", "StopWord\StopWord.csproj", "{3AECBB5D-C9AC-4498-B26B-D426BD767F77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration", "Enumeration\Enumeration.csproj", "{09BA140A-01C3-4EDB-9163-12BF8E8202C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{3AECBB5D-C9AC-4498-B26B-D426BD767F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AECBB5D-C9AC-4498-B26B-D426BD767F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AECBB5D-C9AC-4498-B26B-D426BD767F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09BA140A-01C3-4EDB-9163-12BF8E8202C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09BA140A-01C3-4EDB-9163-12BF8E8202C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09BA140A-01C3-4EDB-9163-12BF8E8202C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09BA140A-01C3-4EDB-9163-12BF8E8202C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
