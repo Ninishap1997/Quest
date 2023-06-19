@@ -79,7 +79,6 @@ namespace Repeat
             rub = Convert.ToSingle(Console.ReadLine());
             usd = Convert.ToSingle(Console.ReadLine());
 
-            Console.WriteLine("Хэллоу ниггга. Обмен валюты");
             Console.WriteLine("1 - обмен валюты");
             Console.WriteLine("2 - обмен доллары на баксы");
 

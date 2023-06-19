@@ -20,14 +20,13 @@ Console.WriteLine("Введите слово");
 while (userInput != stopWord)
 {
     userInput = Console.ReadLine();
+
     if (userInput == stopWord)
     {
         Console.WriteLine("Угадал");
-        break;
     }
     else
     {
         Console.WriteLine("Еще разок");
-        continue;
     }
 }
