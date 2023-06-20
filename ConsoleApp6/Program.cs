@@ -1,4 +1,8 @@
-﻿namespace ConsoleApp6
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Reflection.Emit;
+using System;
+
+namespace ConsoleApp6
 {
     internal class Program
     {
@@ -17,4 +21,5 @@
             Console.WriteLine($"Так правильно {name} {surname}");
         }
     }
+
 }
