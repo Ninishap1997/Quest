@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cycle", "Cycle\Cycle.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StopWord", "StopWord\StopWord.csproj", "{3AECBB5D-C9AC-4498-B26B-D426BD767F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration", "Enumeration\Enumeration.csproj", "{09BA140A-01C3-4EDB-9163-12BF8E8202C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration", "Enumeration\Enumeration.csproj", "{09BA140A-01C3-4EDB-9163-12BF8E8202C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Randomus", "Randomus\Randomus.csproj", "{99E25A8D-A37E-4FDE-9455-3D3298FF4C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Randomus", "Randomus\Randomus.csproj", "{99E25A8D-A37E-4FDE-9455-3D3298FF4C83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tren", "Tren\Tren.csproj", "{72C5A346-8CB9-4907-86B8-0E2A8426FA29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{99E25A8D-A37E-4FDE-9455-3D3298FF4C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99E25A8D-A37E-4FDE-9455-3D3298FF4C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99E25A8D-A37E-4FDE-9455-3D3298FF4C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C5A346-8CB9-4907-86B8-0E2A8426FA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C5A346-8CB9-4907-86B8-0E2A8426FA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C5A346-8CB9-4907-86B8-0E2A8426FA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C5A346-8CB9-4907-86B8-0E2A8426FA29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
