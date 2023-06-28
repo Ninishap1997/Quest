@@ -15,7 +15,6 @@ namespace Tren
             const string CommandBuyEurForRub = "5";
             const string CommandBuyEurForUsd = "6";
 
-
             var client = new HttpClient();
             var url = "https://www.cbr-xml-daily.ru/daily_json.js";
             var responseString = await client.GetStringAsync(url);
@@ -41,7 +40,6 @@ namespace Tren
             string userChoice = null;
             bool exitProgramm = true;
             DateTime dateToday = DateTime.Now;
-
 
             Console.WriteLine("Дратути!");
             Console.WriteLine($"Данный конвертер валют основан на данных ЦБ РФ от {dateToday}");
@@ -95,6 +93,7 @@ namespace Tren
 
                 switch (mainMenu)
                 {
+
                     case CommandBuyUsdForRub:
                         Console.WriteLine("Сколько долларов за рубли Вы хотите купить?");
                         usdInputRate = Convert.ToDecimal(Console.ReadLine());
@@ -130,7 +129,7 @@ namespace Tren
                     case CommandBuyRubForUsd:
                         Console.WriteLine("Сколько рублей за доллары Вы хотите купить?");
                         rubInputRate = Convert.ToDecimal(Console.ReadLine());
-                        usdConvert = rubInputRate * usdRateToRub;
+                        usdConvert = rubInputRate * rubRateToUsd;
 
                         if (usdConvert > usdBalance)
                         {
@@ -146,7 +145,7 @@ namespace Tren
                     case CommandBuyRubForEur:
                         Console.WriteLine("Сколько рублей за евро Вы хотите купить?");
                         eurInputRate = Convert.ToDecimal(Console.ReadLine());
-                        eurConvert = eurInputRate * eurRateToRub;
+                        eurConvert = eurInputRate * rubRateToEur;
 
                         if (eurConvert > eurBalance)
                         {
@@ -198,6 +197,7 @@ namespace Tren
                     default:
                         Console.WriteLine("Error");
                         break;
+
                 }
 
             }
