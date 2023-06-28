@@ -8,49 +8,65 @@ namespace Tren
         public static async Task Main()
         {
             const string CommandExit = "exit";
-            const string CommandOne = "1";
-            const string CommandTwo = "2";
-            const string CommandTree = "3";
+            const string CommandBuyRubForUsd = "1";
+            const string CommandBuyRubForEur = "2";
+            const string CommandBuyUsdForRub = "3";
+            const string CommandBuyUsdForEur = "4";
+            const string CommandBuyEurForRub = "5";
+            const string CommandBuyEurForUsd = "6";
+
 
             var client = new HttpClient();
             var url = "https://www.cbr-xml-daily.ru/daily_json.js";
             var responseString = await client.GetStringAsync(url);
             var exchangeRates = Newtonsoft.Json.JsonConvert.DeserializeObject<ExchangeRates>(responseString);
 
-            string CommandStart = "start";
-            decimal usdRate = exchangeRates.Valute.USD.Value;
-            decimal eurRate = exchangeRates.Valute.EUR.Value;
-            decimal aedRate = exchangeRates.Valute.AED.Value;
-            decimal rubBalance = 500000;
-            decimal usdBalance = 500000;
-            decimal eurBalance = 500000;
-            decimal aedBalance = 500000;
+            decimal usdRateToRub = exchangeRates.Valute.USD.Value;
+            decimal eurRateToRub = exchangeRates.Valute.EUR.Value;
+            decimal eurRateToUsd = 20M;
+            decimal rubRateToUsd = 30M;
+            decimal usdRateToEur = 40M;
+            decimal rubRateToEur = 50M;
+            decimal rubBalance = 0;
+            decimal usdBalance = 0;
+            decimal eurBalance = 0;
+            decimal rubInputRate;
             decimal usdInputRate;
             decimal eurInputRate;
-            decimal aedInputRate;
+            decimal rubConvert;
             decimal usdConvert;
             decimal eurConvert;
-            decimal aedConvert;
+            string commandStart = "start";
+            string mainMenu;
             string userChoice = null;
-            string rateOff;
+            bool exitProgramm = true;
             DateTime dateToday = DateTime.Now;
+
 
             Console.WriteLine("Дратути!");
             Console.WriteLine($"Данный конвертер валют основан на данных ЦБ РФ от {dateToday}");
             Console.WriteLine("Чтобы начать работу, введите команду \"start\"");
 
-            while (userChoice != CommandStart)
+            while (userChoice != commandStart)
             {
                 userChoice = Console.ReadLine();
 
-                if (userChoice == CommandStart)
+                if (userChoice == commandStart)
                 {
                     Console.WriteLine("Добро пожаловать в онлайн конвертер!");
-                    Console.WriteLine("Мы предосталвяем возможность работы со следующими валютами: Евро, Доллар США, Дирхам ОАЭ");
+                    Console.WriteLine("Мы предосталвяем возможность работы со следующими валютами: Евро, Доллар США");
                     Console.WriteLine("На данный момент мы имеем следующие курсы валют:");
-                    Console.WriteLine($"Курс Дирхам ОАЭ: {aedRate} руб.");
-                    Console.WriteLine($"Курс Евро: {eurRate} руб.");
-                    Console.WriteLine($"Курс Доллар США: {usdRate} руб.");
+                    Console.WriteLine($"Курс Евро: {eurRateToRub} руб.");
+                    Console.WriteLine($"Курс Доллар США: {usdRateToRub} руб.");
+
+                    Console.WriteLine("Сколько рублей вы хотите внести на счет?");
+                    rubBalance = Convert.ToDecimal(Console.ReadLine());
+
+                    Console.WriteLine("Сколько евро вы хотите внести на счет?");
+                    eurBalance = Convert.ToDecimal(Console.ReadLine());
+
+                    Console.WriteLine("Сколько долларов вы хотите внести на счет?");
+                    usdBalance = Convert.ToDecimal(Console.ReadLine());
                 }
                 else
                 {
@@ -58,79 +74,136 @@ namespace Tren
                 }
             }
 
-            Console.WriteLine("Если вы хотите приобрести Доллар США - введите цифру 1");
-            Console.WriteLine("Если вы хотите приобрести Евро - введите цифру 2");
-            Console.WriteLine("Если вы хотите приобрести Дирхам ОАЭ - введите цифру 3");
-            Console.WriteLine("Если вы хотите выйти из программы - введите \"exit\"");
+            while (exitProgramm)
+            {
+                Console.WriteLine($"Баланс в рублях: {rubBalance}");
+                Console.WriteLine($"Баланс в долларах: {usdBalance}");
+                Console.WriteLine($"Баланс в евро: {eurBalance}");
 
-            userChoice = Console.ReadLine();
+                Console.WriteLine("Введите следующую команду для пополнения счета:");
+                Console.WriteLine($"Введите команду {CommandBuyRubForUsd} для покупки рублей за доллары");
+                Console.WriteLine($"Введите команду {CommandBuyRubForEur} для покупки  рублей за евро");
 
-                switch (userChoice)
+                Console.WriteLine($"Введите команду {CommandBuyUsdForRub} для покупки долларов за рубли");
+                Console.WriteLine($"Введите команду {CommandBuyUsdForEur} для покупки долларов за евро");
+
+                Console.WriteLine($"Введите команду {CommandBuyEurForRub} для покупки  евро за рубли");
+                Console.WriteLine($"Введите команду {CommandBuyEurForUsd} для покупки евро за доллары");;
+
+                Console.WriteLine($"Введите команду {CommandExit} для выхода из программы");
+                mainMenu = Console.ReadLine();
+
+                switch (mainMenu)
                 {
-                    case CommandOne:
-                        Console.WriteLine("Сколько Долларов США Вы хотите купить?");
-
+                    case CommandBuyUsdForRub:
+                        Console.WriteLine("Сколько долларов за рубли Вы хотите купить?");
                         usdInputRate = Convert.ToDecimal(Console.ReadLine());
-                        usdConvert = usdInputRate * usdRate;
+                        rubConvert = usdInputRate * usdRateToRub;
 
-                        if (usdConvert > rubBalance)
+                        if (rubConvert > rubBalance)
                         {
                             Console.WriteLine("Error");
                         }
                         else
                         {
-                            usdBalance = usdBalance + usdInputRate;
-                            rubBalance = rubBalance - usdConvert;
-
-                            Console.WriteLine($"Ваш кошелек: Доллар США {usdBalance}, Рубль {rubBalance}");
+                            usdBalance += rubConvert;
+                            rubBalance -= usdInputRate;
                         }
                         break;
-                    case CommandTwo:
-                        Console.WriteLine("Сколько Евро Вы хотите купить?");
 
+                    case CommandBuyEurForRub:
+                        Console.WriteLine("Сколько евро за рубли Вы хотите купить?");
                         eurInputRate = Convert.ToDecimal(Console.ReadLine());
-                        eurConvert = eurInputRate * eurRate;
+                        rubConvert = eurInputRate * eurRateToRub;
 
-                        if (eurConvert > rubBalance)
+                        if (rubConvert > rubBalance)
                         {
                             Console.WriteLine("Error");
                         }
                         else
                         {
-                            eurBalance = eurBalance + eurInputRate;
-                            rubBalance = rubBalance - eurConvert;
-
-                            Console.WriteLine($"Ваш кошелек: Евро {eurBalance}, Рубль {rubBalance}");
+                            eurBalance += rubConvert;
+                            rubBalance -= eurInputRate;
                         }
                         break;
-                    case CommandTree:
-                        Console.WriteLine("Сколько Дирхам ОАЭ Вы хотите купить?");
 
-                        aedInputRate = Convert.ToDecimal(Console.ReadLine());
-                        aedConvert = aedInputRate * aedRate;
+                    case CommandBuyRubForUsd:
+                        Console.WriteLine("Сколько рублей за доллары Вы хотите купить?");
+                        rubInputRate = Convert.ToDecimal(Console.ReadLine());
+                        usdConvert = rubInputRate * usdRateToRub;
 
-                        if (aedConvert > rubBalance)
+                        if (usdConvert > usdBalance)
                         {
                             Console.WriteLine("Error");
                         }
                         else
                         {
-                            aedBalance = aedBalance + aedInputRate;
-                            rubBalance = rubBalance - aedConvert;
-
-                            Console.WriteLine($"Ваш кошелек: Дирхам ОАЭ {aedBalance}, Рубль {rubBalance}");
+                            rubBalance += usdConvert;
+                            usdBalance -= rubInputRate;
                         }
                         break;
+
+                    case CommandBuyRubForEur:
+                        Console.WriteLine("Сколько рублей за евро Вы хотите купить?");
+                        eurInputRate = Convert.ToDecimal(Console.ReadLine());
+                        eurConvert = eurInputRate * eurRateToRub;
+
+                        if (eurConvert > eurBalance)
+                        {
+                            Console.WriteLine("Error");
+                        }
+                        else
+                        {
+                            rubBalance += eurConvert;
+                            eurBalance -= eurInputRate;
+                        }
+                        break;
+
+                    case CommandBuyEurForUsd:
+                        Console.WriteLine("Сколько евро за доллары Вы хотите купить?");
+                        usdInputRate = Convert.ToDecimal(Console.ReadLine());
+                        usdConvert = usdInputRate * eurRateToUsd;
+
+                        if(usdConvert > usdBalance)
+                        {
+                            Console.WriteLine("Error");
+                        }
+                        else
+                        {
+                            eurBalance += usdConvert;
+                            usdBalance -= usdConvert;
+                        }
+                        break;
+
+                    case CommandBuyUsdForEur:
+                        Console.WriteLine("Сколько долларов за евро Вы хотите купить?");
+                        eurInputRate = Convert.ToDecimal(Console.ReadLine());
+                        eurConvert = eurInputRate * usdRateToEur;
+
+                        if (eurConvert > eurBalance)
+                        {
+                            Console.WriteLine("Error");
+                        }
+                        else
+                        {
+                            usdBalance += eurConvert;
+                            eurBalance -= eurConvert;
+                        }
+                        break;
+
                     case CommandExit:
                         Console.WriteLine("Датвидути");
                         break;
+
                     default:
                         Console.WriteLine("Error");
                         break;
                 }
+
             }
         }
     }
+}
 
     public class ExchangeRates
     {
@@ -141,7 +214,6 @@ namespace Tren
     {
         public USD USD { get; set; }
         public EUR EUR { get; set; }
-        public AED AED { get; set; }
     }
 
     public class USD
@@ -150,11 +222,6 @@ namespace Tren
     }
     
     public class EUR
-    {
-        public decimal Value { get; set; }
-    }
-
-    public class AED
     {
         public decimal Value { get; set; }
     }
