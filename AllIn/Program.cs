@@ -22,9 +22,7 @@
             string setHeroName;
             string setHeroClass;
             string setHeroRace;
-            string volume;
             string approvalChangeGraphics = "Yes";
-            string graphicsForegroundColor;
             string mainMenu;
             string menuGraphics;
 
