@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tren", "Tren\Tren.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllIn", "AllIn\AllIn.csproj", "{65189BC9-C60F-4C3A-BFC0-18F4A7CFB1BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charik", "Charik\Charik.csproj", "{74DDD165-3000-4268-875F-EC1E93A7AE5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{65189BC9-C60F-4C3A-BFC0-18F4A7CFB1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65189BC9-C60F-4C3A-BFC0-18F4A7CFB1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65189BC9-C60F-4C3A-BFC0-18F4A7CFB1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DDD165-3000-4268-875F-EC1E93A7AE5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DDD165-3000-4268-875F-EC1E93A7AE5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DDD165-3000-4268-875F-EC1E93A7AE5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DDD165-3000-4268-875F-EC1E93A7AE5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
