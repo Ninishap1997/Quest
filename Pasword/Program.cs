@@ -17,7 +17,7 @@
             string warBossChoiseBigBird = "Штука";
             string warBossChoiseFang = "Зубы";
             string warBossChoise;
-            int attemptsSystem = 5;
+            int attemptsSystem = 3;
             int userAttempts = 0;
 
             for (int i = userAttempts; userAttempts < attemptsSystem; attemptsSystem--)
