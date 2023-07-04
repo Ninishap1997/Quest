@@ -21,15 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration", "Enumeration\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Randomus", "Randomus\Randomus.csproj", "{99E25A8D-A37E-4FDE-9455-3D3298FF4C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tren", "Tren\Tren.csproj", "{72C5A346-8CB9-4907-86B8-0E2A8426FA29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tren", "Tren\Tren.csproj", "{72C5A346-8CB9-4907-86B8-0E2A8426FA29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllIn", "AllIn\AllIn.csproj", "{65189BC9-C60F-4C3A-BFC0-18F4A7CFB1BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllIn", "AllIn\AllIn.csproj", "{65189BC9-C60F-4C3A-BFC0-18F4A7CFB1BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charik", "Charik\Charik.csproj", "{74DDD165-3000-4268-875F-EC1E93A7AE5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Charik", "Charik\Charik.csproj", "{74DDD165-3000-4268-875F-EC1E93A7AE5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasword", "Pasword\Pasword.csproj", "{B2489B22-3E25-47B9-AD12-3A84E7531473}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pasword", "Pasword\Pasword.csproj", "{B2489B22-3E25-47B9-AD12-3A84E7531473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HZ", "HZ\HZ.csproj", "{C348421E-1616-44A5-AD0F-33CDD3214ADB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HZ", "HZ\HZ.csproj", "{C348421E-1616-44A5-AD0F-33CDD3214ADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "step", "step\step.csproj", "{E76E883E-CC61-4052-A006-DD8C6AE69011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76E883E-CC61-4052-A006-DD8C6AE69011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76E883E-CC61-4052-A006-DD8C6AE69011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76E883E-CC61-4052-A006-DD8C6AE69011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76E883E-CC61-4052-A006-DD8C6AE69011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
