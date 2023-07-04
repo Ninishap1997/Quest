@@ -1,5 +1,4 @@
-﻿
-Random random = new Random();
+﻿Random random = new Random();
 int randomNumber;
 int determinationDegree = 0;
 int result = 1;
@@ -15,6 +14,6 @@ while (result <= randomNumber)
     result *= degreeErection;
 }
 
-Console.WriteLine($"Число: {randomNumber}");
-Console.WriteLine($"Степень: {determinationDegree}");
+Console.WriteLine($"Число - {randomNumber}");
+Console.WriteLine($"Степень - {determinationDegree}");
 Console.WriteLine($"2 в степени {determinationDegree} = {result}");
