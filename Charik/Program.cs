@@ -6,24 +6,48 @@ namespace Charik
     {
         static void Main(string[] args)
         {
-            string inputName;
-            string rectangleSymbols;
-            char inputSymbol;
-            
+            string name;
+            char symbol;
+            int rectangleWidth;
+            string horizontalLine;
+            string formattedName;
 
-            Console.WriteLine("Введите имя");
-            inputName = Console.ReadLine();
+            Console.Write("Введите имя: ");
+            name = Console.ReadLine();
 
-            Console.WriteLine("Введите символ");
-            inputSymbol = (char)Console.Read();
+            Console.Write("Введите символ: ");
+            symbol = Console.ReadKey().KeyChar;
+            Console.WriteLine();
 
-            rectangleSymbols = new string(inputSymbol, inputName.Length + 2);
+            rectangleWidth = name.Length + 2;
+            horizontalLine = new string(symbol, rectangleWidth);
 
-            Console.WriteLine(rectangleSymbols);
-            Console.Write(inputSymbol);
-            Console.Write(inputName);
-            Console.WriteLine(inputSymbol);
-            Console.WriteLine(rectangleSymbols);
+            Console.WriteLine(horizontalLine);
+
+            formattedName = $"{symbol}{name}{symbol}";
+            Console.WriteLine(formattedName);
+
+            Console.WriteLine(horizontalLine);
+
+
+            /* string inputName;
+             string rectangleSymbols;
+             char inputSymbol;
+
+
+             Console.WriteLine("Введите имя");
+             inputName = Console.ReadLine();
+
+             Console.WriteLine("Введите символ");
+             inputSymbol = (char)Console.Read();
+
+             rectangleSymbols = new string(inputSymbol, inputName.Length + 2);
+
+             Console.WriteLine(rectangleSymbols);
+             Console.Write(inputSymbol);
+             Console.Write(inputName);
+             Console.WriteLine(inputSymbol);
+             Console.WriteLine(rectangleSymbols);*/
 
             /*string name;
             string symbol;
