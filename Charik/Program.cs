@@ -12,11 +12,11 @@ namespace Charik
             string horizontalLine;
             string formattedName;
 
-            Console.Write("Введите имя: ");
+            Console.WriteLine("Введите имя");
             name = Console.ReadLine();
 
-            Console.Write("Введите символ: ");
-            symbol = Console.ReadKey().KeyChar;
+            Console.WriteLine("Введите символ");
+            symbol = Convert.ToChar(Console.ReadLine());
             Console.WriteLine();
 
             rectangleWidth = name.Length + 2;
