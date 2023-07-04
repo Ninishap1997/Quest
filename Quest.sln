@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charik", "Charik\Charik.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasword", "Pasword\Pasword.csproj", "{B2489B22-3E25-47B9-AD12-3A84E7531473}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HZ", "HZ\HZ.csproj", "{C348421E-1616-44A5-AD0F-33CDD3214ADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{B2489B22-3E25-47B9-AD12-3A84E7531473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2489B22-3E25-47B9-AD12-3A84E7531473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2489B22-3E25-47B9-AD12-3A84E7531473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C348421E-1616-44A5-AD0F-33CDD3214ADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
