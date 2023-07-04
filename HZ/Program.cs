@@ -11,7 +11,7 @@
             int minimumValue = 1;
             int maximumValue = 27;
 
-            Console.WriteLine("Введите число от 1 до 27:");
+            Console.WriteLine("Введите число от 1 до 27");
             userInput = Convert.ToInt32(Console.ReadLine());
             if (userInput > minimumValue && userInput < maximumValue)
             {
