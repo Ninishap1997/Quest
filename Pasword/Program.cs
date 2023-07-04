@@ -17,10 +17,10 @@
             string warBossChoiseBigBird = "Штука";
             string warBossChoiseFang = "Зубы";
             string warBossChoise;
-            int userAttempts = 5;
-            int userInput = 0;
+            int attemptsSystem = 5;
+            int userAttempts = 0;
 
-            for (int i = userInput; userInput < userAttempts; userAttempts--)
+            for (int i = userAttempts; userAttempts < attemptsSystem; attemptsSystem--)
             {
                 Console.WriteLine("Введите пароль");
                 passwordInput = Console.ReadLine();
@@ -28,7 +28,7 @@
                 if (passwordInput != password)
                 {
                     Console.WriteLine("Введен неверный пароль");
-                    Console.WriteLine($"Осталось попыток {userAttempts -1}");
+                    Console.WriteLine($"Осталось попыток {attemptsSystem - 1}");
                 }
                 else
                 {
