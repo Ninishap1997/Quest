@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string password;
+            string userAttempts = "5";
+            string userInput = "0";
+
+            for (string i = userInput;   )
         }
     }
 }
