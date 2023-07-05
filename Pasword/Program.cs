@@ -18,18 +18,18 @@
             string warBossChoiseFang = "Зубы";
             string warBossChoise;
             int attemptsCount = 3;
-            int userAttempts = 0;
+            int remainingAttempts = 0;
 
-            for (int i = userAttempts; i < attemptsCount; i++)
+            for (int i = 0; i < attemptsCount; i++)
             {
                 Console.WriteLine("Введите пароль");
                 passwordInput = Console.ReadLine();
 
                 if (passwordInput != password)
                 {
-                    attemptsCount--;
+                    remainingAttempts = attemptsCount - i;
                     Console.WriteLine("Введен неверный пароль");
-                    Console.WriteLine($"Осталось попыток {attemptsCount}");
+                    Console.WriteLine($"Осталось попыток {remainingAttempts}");
                 }
                 else
                 {
@@ -66,7 +66,6 @@
                                     Console.WriteLine("Мне нужны их зубыы не повредите зубыыы");
                                     Console.WriteLine($"Тупоголовый гретчин продал последний бомбовоз за {fangCost} зубов");
                                 }
-
                                 break;
                         }
 

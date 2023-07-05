@@ -22,24 +22,28 @@
                     {
                         maxDepth = depth;
                     }
+
                 }
                 else if (symbol == ')')
                 {
                     depth--;
+
                     if (depth < 0)
                     {
-                        Console.WriteLine("ОШИБКА");
+                        Console.WriteLine("Что-то тут не то...");
                         return;
                     }
+
                 }
             }
 
             if (depth != 0)
             {
-                Console.WriteLine("ОШИБКА");
+                Console.WriteLine("Что-то тут не то...");
                 return;
             }
-            Console.WriteLine("Корректное выражение, максимальная глубина: " + maxDepth);
+
+            Console.WriteLine($"Что-то тут то...максимальная глубина - {maxDepth}");
         }
     }
 }
