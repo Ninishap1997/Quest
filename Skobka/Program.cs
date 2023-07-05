@@ -6,44 +6,48 @@
         {
             int depth = 0;
             int maxDepth = 0;
-            string inputUser;
-            
-            Console.WriteLine("Введите текст из любого количества символов '(' и ')'\n");
+            string userInputSymbol;
 
-            inputUser = Console.ReadLine();
+            Console.WriteLine("Нужна строка с символами, введи строку с символами '(' и ')'");
+            userInputSymbol = Console.ReadLine();
 
-            foreach (char symbol in inputUser)
+            if (!userInputSymbol.Contains('(') && !userInputSymbol.Contains(')'))
+            {
+                Console.WriteLine("Гретчин! Ты не ввел строку с символами '(', ')'");
+                return;
+            }
+
+            foreach (char symbol in userInputSymbol)
             {
                 if (symbol == '(')
                 {
                     depth++;
-
-                    if (depth > maxDepth)
-                    {
-                        maxDepth = depth;
-                    }
-
+                    maxDepth = Math.Max(maxDepth, depth);
                 }
                 else if (symbol == ')')
                 {
-                    depth--;
-
-                    if (depth < 0)
+                    if (depth == 0)
                     {
-                        Console.WriteLine("Что-то тут не то...");
+                        Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
                         return;
                     }
-
+                    depth--;
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка! Строка может содержать только символы '(', ')'");
+                    return;
                 }
             }
 
-            if (depth != 0)
+            if (depth == 0)
             {
-                Console.WriteLine("Что-то тут не то...");
-                return;
+                Console.WriteLine($"Молодец, твоя строка - {userInputSymbol}, глубина - {maxDepth}");
             }
-
-            Console.WriteLine($"Что-то тут то...максимальная глубина - {maxDepth}");
+            else
+            {
+                Console.WriteLine($"Гретчин! Неверная строка {userInputSymbol}");
+            }
         }
     }
 }
