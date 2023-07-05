@@ -10,25 +10,26 @@
             const string CommandSellPlane = "4";
 
             Random random = new Random();
-            int costFang = random.Next();
+            int fangCost = random.Next();
             string password = "Password";
             string passwordInput;
             string warBossCommand;
             string warBossChoiseBigBird = "Штука";
             string warBossChoiseFang = "Зубы";
             string warBossChoise;
-            int attemptsSystem = 3;
+            int attemptsCount = 3;
             int userAttempts = 0;
 
-            for (int i = userAttempts; userAttempts < attemptsSystem; attemptsSystem--)
+            for (int i = userAttempts; i < attemptsCount; i++)
             {
                 Console.WriteLine("Введите пароль");
                 passwordInput = Console.ReadLine();
 
                 if (passwordInput != password)
                 {
+                    attemptsCount--;
                     Console.WriteLine("Введен неверный пароль");
-                    Console.WriteLine($"Осталось попыток {attemptsSystem - 1}");
+                    Console.WriteLine($"Осталось попыток {attemptsCount}");
                 }
                 else
                 {
@@ -42,12 +43,15 @@
                             case CommandWhaaghHumanity:
                                 Console.WriteLine("Ми будим стукать людишей, заряжай свинцометы!");
                                 break;
+
                             case CommandWhaaghGorka:
                                 Console.WriteLine("ГОРКА НЕ МОРКА ЗЕЛЕНОГОЛОВЫЙ!");
                                 break;
+
                             case CommandWhaaghMorka:
                                 Console.WriteLine("НЕТ МОРКА НЕ ГОРКА!");
                                 break;
+
                             case CommandSellPlane:
                                 Console.WriteLine("Большая птица или большой клык?");
                             Console.WriteLine($"Ваш приказ: {warBossChoiseBigBird} или {warBossChoiseFang}?");
@@ -60,11 +64,14 @@
                                 else
                                 {
                                     Console.WriteLine("Мне нужны их зубыы не повредите зубыыы");
-                                    Console.WriteLine($"Тупоголовый гретчин продал последний бомбовоз за {costFang} зубов");
+                                    Console.WriteLine($"Тупоголовый гретчин продал последний бомбовоз за {fangCost} зубов");
                                 }
+
                                 break;
                         }
+
                     break;
+
                 }
             }
         }
