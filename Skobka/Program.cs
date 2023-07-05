@@ -7,46 +7,52 @@
             int depth = 0;
             int maxDepth = 0;
             string userInputSymbol;
+            bool success = true;
 
-            Console.WriteLine("Нужна строка с символами, введи строку с символами '(' и ')'");
-            userInputSymbol = Console.ReadLine();
-
-            if (!userInputSymbol.Contains('(') && !userInputSymbol.Contains(')'))
+            while (success)
             {
-                Console.WriteLine("Гретчин! Ты не ввел строку с символами '(', ')'");
-                return;
-            }
 
-            foreach (char symbol in userInputSymbol)
-            {
-                if (symbol == '(')
+                Console.WriteLine("Нужна строка с символами, введи строку с символами '(' и ')'");
+                userInputSymbol = Console.ReadLine();
+
+                if (!userInputSymbol.Contains('(') && !userInputSymbol.Contains(')'))
                 {
-                    depth++;
-                    maxDepth = Math.Max(maxDepth, depth);
+                    Console.WriteLine("Гретчин! Ты не ввел строку с символами '(', ')'");
+                    return;
                 }
-                else if (symbol == ')')
+
+                foreach (char symbol in userInputSymbol)
                 {
-                    if (depth == 0)
+                    if (symbol == '(')
                     {
-                        Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
+                        depth++;
+                        maxDepth = Math.Max(maxDepth, depth);
+                    }
+                    else if (symbol == ')')
+                    {
+                        if (depth == 0)
+                        {
+                            Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
+                            return;
+                        }
+                        depth--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка! Строка может содержать только символы '(', ')'");
                         return;
                     }
-                    depth--;
+                }
+
+                if (depth == 0)
+                {
+                    Console.WriteLine($"Молодец, твоя строка - {userInputSymbol}, глубина - {maxDepth}");
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Ошибка! Строка может содержать только символы '(', ')'");
-                    return;
+                    Console.WriteLine($"Гретчин! Неверная строка {userInputSymbol}");
                 }
-            }
-
-            if (depth == 0)
-            {
-                Console.WriteLine($"Молодец, твоя строка - {userInputSymbol}, глубина - {maxDepth}");
-            }
-            else
-            {
-                Console.WriteLine($"Гретчин! Неверная строка {userInputSymbol}");
             }
         }
     }
