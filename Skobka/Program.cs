@@ -13,7 +13,6 @@
 
             while (isSuccess)
             {
-
                 Console.WriteLine("Нужна строка с символами, введи строку с символами '(' и ')'");
                 userInputSymbol = Console.ReadLine();
 
@@ -28,7 +27,10 @@
                     if (symbolLeft == symbol)
                     {
                         depth++;
-                        maxDepth = Math.Max(maxDepth, depth);
+                        if (depth > maxDepth)
+                        {
+                            maxDepth = depth;
+                        }
                     }
                     else if (symbolRight == symbol)
                     {
@@ -46,14 +48,11 @@
                     }
                 }
 
-                if (depth == 0)
+                if (depth <= 0)
                 {
                     Console.WriteLine($"Молодец, твоя строка - {userInputSymbol}, глубина - {maxDepth}");
-                    break;
+                    isSuccess = false;
                 }
-
-               Console.WriteLine($"Гретчин! Неверная строка {userInputSymbol}");
-                
             }
         }
     }
