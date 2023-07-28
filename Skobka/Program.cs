@@ -14,7 +14,7 @@
             while (isSuccess)
             {
                 Console.WriteLine($"Нужна строка с символами, введи строку с символами {leftSymbol}, {rightSymbol}");
-                userInputSymbols = Console.ReadLine();
+                userInputSymbols = Console.ReadLine(); 
 
                 if (userInputSymbols.Contains(leftSymbol) == false && userInputSymbols.Contains(rightSymbol) == false)
                 {
