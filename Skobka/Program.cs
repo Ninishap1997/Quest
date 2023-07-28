@@ -13,7 +13,7 @@
 
             while (isSuccess)
             {
-                Console.WriteLine("Нужна строка с символами, введи строку с символами '(' и ')'");
+                Console.WriteLine($"Нужна строка с символами, введи строку с символами {symbolLeft}, {symbolRight}");
                 userInputSymbol = Console.ReadLine();
 
                 if (userInputSymbol.Contains(symbolLeft) == false && userInputSymbol.Contains(symbolRight) == false)
@@ -38,7 +38,8 @@
                         if (depth < 0)
                         {
                             Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
-                            return;
+                            isSuccess = false;
+                            break;
                         }
 
                         depth--;
@@ -47,7 +48,8 @@
                     else
                     {
                         Console.WriteLine($"Гретчин! Строка может содержать только символы {symbolLeft}, {symbolRight}");
-                        return;
+                        isSuccess = false;
+                        break;
                     }
                 }
 
