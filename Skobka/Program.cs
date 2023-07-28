@@ -16,7 +16,7 @@
                 Console.WriteLine("Нужна строка с символами, введи строку с символами '(' и ')'");
                 userInputSymbol = Console.ReadLine();
 
-                if (!userInputSymbol.Contains('(') && !userInputSymbol.Contains(')'))
+                if (userInputSymbol.Contains(symbolLeft) == false && userInputSymbol.Contains(symbolRight) == false)
                 {
                     Console.WriteLine("Гретчин! Ты не ввел строку с символами '(', ')'");
                     return;
@@ -27,6 +27,7 @@
                     if (symbolLeft == symbol)
                     {
                         depth++;
+
                         if (depth > maxDepth)
                         {
                             maxDepth = depth;
@@ -34,12 +35,13 @@
                     }
                     else if (symbolRight == symbol)
                     {
-                        if (depth == 0)
+                        if (depth < 0)
                         {
                             Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
                             return;
                         }
                         depth--;
+
                     }
                     else
                     {
@@ -48,7 +50,7 @@
                     }
                 }
 
-                if (depth <= 0)
+                if (depth == 0)
                 {
                     Console.WriteLine($"Молодец, твоя строка - {userInputSymbol}, глубина - {maxDepth}");
                     isSuccess = false;
