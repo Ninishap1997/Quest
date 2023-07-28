@@ -8,23 +8,23 @@
             int maxDepth = 0;
             string userInputSymbols;
             bool isSuccess = true;
-            char leftSymbol = '(';
-            char rightSymbol = ')';
+            char leftBracket = '(';
+            char rightBracket = ')';
 
             while (isSuccess)
             {
-                Console.WriteLine($"Нужна строка с символами, введи строку с символами {leftSymbol}, {rightSymbol}");
+                Console.WriteLine($"Нужна строка с символами, введи строку с символами {leftBracket}, {rightBracket}");
                 userInputSymbols = Console.ReadLine(); 
 
-                if (userInputSymbols.Contains(leftSymbol) == false && userInputSymbols.Contains(rightSymbol) == false)
+                if (userInputSymbols.Contains(leftBracket) == false && userInputSymbols.Contains(rightBracket) == false)
                 {
-                    Console.WriteLine($"Гретчин! Ты не ввел строку с символами {leftSymbol}, {rightSymbol}");
+                    Console.WriteLine($"Гретчин! Ты не ввел строку с символами {leftBracket}, {rightBracket}");
                     return;
                 }
 
                 foreach (char symbol in userInputSymbols)
                 {
-                    if (leftSymbol == symbol)
+                    if (leftBracket == symbol)
                     {
                         depth++;
 
@@ -33,7 +33,7 @@
                             maxDepth = depth;
                         }
                     }
-                    else if (rightSymbol == symbol)
+                    else if (rightBracket == symbol)
                     {
                         if (depth < 0)
                         {
@@ -46,7 +46,7 @@
                     }
                     else
                     {
-                        Console.WriteLine($"Гретчин! Строка может содержать только символы {leftSymbol}, {rightSymbol}");
+                        Console.WriteLine($"Гретчин! Строка может содержать только символы {leftBracket}, {rightBracket}");
                         isSuccess = false;
                         break;
                     }
