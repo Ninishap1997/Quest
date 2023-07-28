@@ -18,7 +18,7 @@
 
                 if (userInputSymbol.Contains(symbolLeft) == false && userInputSymbol.Contains(symbolRight) == false)
                 {
-                    Console.WriteLine("Гретчин! Ты не ввел строку с символами '(', ')'");
+                    Console.WriteLine($"Гретчин! Ты не ввел строку с символами {symbolLeft}, {symbolRight}");
                     return;
                 }
 
@@ -40,12 +40,13 @@
                             Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
                             return;
                         }
+
                         depth--;
 
                     }
                     else
                     {
-                        Console.WriteLine("Гретчин! Строка может содержать только символы '(', ')'");
+                        Console.WriteLine($"Гретчин! Строка может содержать только символы {symbolLeft}, {symbolRight}");
                         return;
                     }
                 }
