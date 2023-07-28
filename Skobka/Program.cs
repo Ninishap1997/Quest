@@ -6,25 +6,25 @@
         {
             int depth = 0;
             int maxDepth = 0;
-            string userInputSymbol;
+            string userInputSymbols;
             bool isSuccess = true;
-            char symbolLeft = '(';
-            char symbolRight = ')';
+            char leftSymbol = '(';
+            char rightSymbol = ')';
 
             while (isSuccess)
             {
-                Console.WriteLine($"Нужна строка с символами, введи строку с символами {symbolLeft}, {symbolRight}");
-                userInputSymbol = Console.ReadLine();
+                Console.WriteLine($"Нужна строка с символами, введи строку с символами {leftSymbol}, {rightSymbol}");
+                userInputSymbols = Console.ReadLine();
 
-                if (userInputSymbol.Contains(symbolLeft) == false && userInputSymbol.Contains(symbolRight) == false)
+                if (userInputSymbols.Contains(leftSymbol) == false && userInputSymbols.Contains(rightSymbol) == false)
                 {
-                    Console.WriteLine($"Гретчин! Ты не ввел строку с символами {symbolLeft}, {symbolRight}");
+                    Console.WriteLine($"Гретчин! Ты не ввел строку с символами {leftSymbol}, {rightSymbol}");
                     return;
                 }
 
-                foreach (char symbol in userInputSymbol)
+                foreach (char symbol in userInputSymbols)
                 {
-                    if (symbolLeft == symbol)
+                    if (leftSymbol == symbol)
                     {
                         depth++;
 
@@ -33,21 +33,20 @@
                             maxDepth = depth;
                         }
                     }
-                    else if (symbolRight == symbol)
+                    else if (rightSymbol == symbol)
                     {
                         if (depth < 0)
                         {
-                            Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbol}");
+                            Console.WriteLine($"Гретчин! Ты не ввел строку с символами {userInputSymbols}");
                             isSuccess = false;
                             break;
                         }
 
                         depth--;
-
                     }
                     else
                     {
-                        Console.WriteLine($"Гретчин! Строка может содержать только символы {symbolLeft}, {symbolRight}");
+                        Console.WriteLine($"Гретчин! Строка может содержать только символы {leftSymbol}, {rightSymbol}");
                         isSuccess = false;
                         break;
                     }
@@ -55,7 +54,7 @@
 
                 if (depth == 0)
                 {
-                    Console.WriteLine($"Молодец, твоя строка - {userInputSymbol}, глубина - {maxDepth}");
+                    Console.WriteLine($"Молодец, твоя строка - {userInputSymbols}, глубина - {maxDepth}");
                     isSuccess = false;
                 }
             }
