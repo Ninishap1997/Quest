@@ -40,7 +40,7 @@
             Console.WriteLine($"3 - Возниси молитву Ему и спаси свою душу от ужаса варпа. Исцеление {healingLight}");
             Console.WriteLine($"4 - Экстерминатус. Урон {damageOrbitalBombardment}");
 
-            while (startGame) //(healthHeretic < 0 || healthForceCommander < 0 || manaForceCommander < 0)
+            while (startGame)
             {
                 Console.WriteLine("Нанесите удар");
                 spell = Console.ReadLine();
