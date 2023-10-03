@@ -23,10 +23,9 @@
             float manaEmperorFury = 15;
             float manaCharge = 20;
             float manaHealingLight = 25;
+
             bool startGame = true;
             string spell;
-
-            bool killTheHeretic = true;
 
             Console.WriteLine("Я - капитан ордена космодесанта, готовый сражаться до последней капли крови за Империум. На моем пути встретились подлые еретики хаоса, которые хотели уничтожить нашу святую землю.");
             Console.WriteLine("В ожесточенной схватке, под выстрелы болтеров погибло много наших братьев сегодня");
