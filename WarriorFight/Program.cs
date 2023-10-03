@@ -14,6 +14,8 @@
             float damageHeretic = random.Next(25,80);
             float healthForceCommander = random.Next(250, 750);
             float manaForceCommander = random.Next(100, 350);
+            float zeroHp = 0;
+            float minimumHp = 10;
 
             float damageEmperorFury = random.Next(50, 71);
             float damageCharge = random.Next(80, 100);
@@ -24,7 +26,7 @@
             float manaCharge = 20;
             float manaHealingLight = 25;
 
-            bool startGame = true;
+            bool isStartGame = true;
             string spell;
 
             Console.WriteLine("Я - капитан ордена космодесанта, готовый сражаться до последней капли крови за Империум. На моем пути встретились подлые еретики хаоса, которые хотели уничтожить нашу святую землю.");
@@ -40,7 +42,7 @@
             Console.WriteLine($"3 - Возниси молитву Ему и спаси свою душу от ужаса варпа. Исцеление {healingLight}");
             Console.WriteLine($"4 - Экстерминатус. Урон {damageOrbitalBombardment}");
 
-            while (startGame)
+            while (isStartGame)
             {
                 Console.WriteLine("Нанесите удар");
                 spell = Console.ReadLine();
@@ -48,8 +50,7 @@
                 switch (spell)
                 {
                     case CommandEmperorFury:
-                        if (manaForceCommander > manaEmperorFury)
-                        {
+
                             healthHeretic -= damageEmperorFury;
                             manaForceCommander -= manaEmperorFury;
                             healthForceCommander -= damageHeretic;
@@ -57,11 +58,10 @@
                             Console.WriteLine($"Вы получили {damageHeretic} урона");
                             Console.WriteLine($"Здоровье демон-принца {healthHeretic}");
                             Console.WriteLine($"Ваше здоровье - {healthForceCommander}. Запас маны - {manaForceCommander}");
-                        }
+
                         break;
                     case CommandCharge:
-                        if (manaForceCommander > manaCharge)
-                        {
+
                             healthHeretic -= damageCharge;
                             manaForceCommander -= manaCharge;
                             healthForceCommander -= damageHeretic;
@@ -69,41 +69,51 @@
                             Console.WriteLine($"Вы получили {damageHeretic} урона");
                             Console.WriteLine($"Здоровье демон-принца {healthHeretic}");
                             Console.WriteLine($"Ваше здоровье - {healthForceCommander}. Запас маны - {manaForceCommander}");
-                        }
+
                         break;
                     case CommandEmperorLight:
-                        if (manaForceCommander > manaHealingLight)
-                        {
+
                             healthForceCommander += healingLight;
                             manaForceCommander -= manaHealingLight;
                             healthForceCommander -= damageHeretic;
                             Console.WriteLine($"Вы получили {damageHeretic} урона");
                             Console.WriteLine($"Здоровье демон-принца {healthHeretic}");
                             Console.WriteLine($"Ваше здоровье - {healthForceCommander}. Запас маны - {manaForceCommander}");
-                        }
+                        
                         break;
                     case CommandOrbitalBombardment:
-                        if (healthForceCommander > 0 && healthForceCommander < 10)
+
+                        if (healthForceCommander > zeroHp && healthForceCommander < minimumHp)
                         {
                             healthHeretic -= damageOrbitalBombardment;
                             healthForceCommander -= damageOrbitalBombardment;
                             Console.WriteLine($"Здоровье демон-принца {healthHeretic}");
                             Console.WriteLine($"Ваше здоровье - {healthForceCommander}. Запас маны - {manaForceCommander}");
                             Console.WriteLine("Враг был побежден, но гено семя сохранить, увы, не удалось.");
-                            startGame = false;
+                            isStartGame = false;
                         }
+                        else
+                        {
+                            Console.WriteLine("Еще есть шанас победить!");
+                        }
+
                         break;
                 }
 
-                if (healthHeretic < 0)
+                if (healthHeretic < zeroHp)
                 {
                     Console.WriteLine("Жалкий еретик отправлен обратно в варп во имя Императора!");
-                    startGame = false;
+                    isStartGame = false;
                 }
-                else if (healthForceCommander < 0 || manaForceCommander < 0)
+                else if (healthForceCommander < zeroHp || manaForceCommander < zeroHp)
                 {
                     Console.WriteLine("Император покинул вас");
-                    startGame = false;
+                    isStartGame = false;
+                }
+                else if (healthForceCommander < zeroHp && healthHeretic < zeroHp)
+                {
+                    Console.WriteLine("Эта битва закончилась, будут еще друие, но без наших героев.");
+                    isStartGame = false;
                 }
             }
         }
