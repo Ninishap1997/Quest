@@ -90,7 +90,6 @@
                             Console.WriteLine($"Здоровье демон-принца {healthHeretic}");
                             Console.WriteLine($"Ваше здоровье - {healthForceCommander}. Запас маны - {manaForceCommander}");
                             Console.WriteLine("Враг был побежден, но гено семя сохранить, увы, не удалось.");
-                            isStartGame = false;
                         }
                         else
                         {
