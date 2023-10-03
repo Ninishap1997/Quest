@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HZ", "HZ\HZ.csproj", "{C348
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "step", "step\step.csproj", "{E76E883E-CC61-4052-A006-DD8C6AE69011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skobka", "Skobka\Skobka.csproj", "{38FF5599-764E-41A7-B3EC-B75E43D60B7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skobka", "Skobka\Skobka.csproj", "{38FF5599-764E-41A7-B3EC-B75E43D60B7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarriorFight", "WarriorFight\WarriorFight.csproj", "{8B657274-A4D1-41AC-96BF-38D4EB92FE6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{38FF5599-764E-41A7-B3EC-B75E43D60B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38FF5599-764E-41A7-B3EC-B75E43D60B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38FF5599-764E-41A7-B3EC-B75E43D60B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B657274-A4D1-41AC-96BF-38D4EB92FE6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B657274-A4D1-41AC-96BF-38D4EB92FE6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B657274-A4D1-41AC-96BF-38D4EB92FE6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B657274-A4D1-41AC-96BF-38D4EB92FE6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
