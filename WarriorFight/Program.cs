@@ -14,7 +14,6 @@
             float damageHeretic = random.Next(25,80);
             float healthForceCommander = random.Next(250, 750);
             float manaForceCommander = random.Next(100, 350);
-            float zeroHp = 0;
             float minimumHp = 10;
 
             float damageEmperorFury = random.Next(50, 71);
@@ -26,7 +25,6 @@
             float manaCharge = 20;
             float manaHealingLight = 25;
 
-            bool isStartGame = true;
             string spell;
 
             Console.WriteLine("Я - капитан ордена космодесанта, готовый сражаться до последней капли крови за Империум. На моем пути встретились подлые еретики хаоса, которые хотели уничтожить нашу святую землю.");
@@ -37,12 +35,12 @@
             Console.WriteLine($"Здоровье демон-принца {healthHeretic}. Урон - {damageHeretic}");
             Console.WriteLine($"Ваше здоровье - {healthForceCommander}. Запас маны - {manaForceCommander}");
             Console.WriteLine("Ваши умения:");
-            Console.WriteLine($"1 - Ярость Императора - Могуй удар силовым молотом дезинтегриующих низших демонов. Урон {damageEmperorFury}");
-            Console.WriteLine($"2 - Заряд плазмы - Возьмите улучшенный, самими Адептус Механикус, плазменный пистолет и испепелите врагов Императора. Урон {damageCharge}");
-            Console.WriteLine($"3 - Возниси молитву Ему и спаси свою душу от ужаса варпа. Исцеление {healingLight}");
-            Console.WriteLine($"4 - Экстерминатус. Урон {damageOrbitalBombardment}");
+            Console.WriteLine($"{CommandEmperorFury} - Ярость Императора - Могуй удар силовым молотом дезинтегриующих низших демонов. Урон {damageEmperorFury}");
+            Console.WriteLine($"{CommandCharge} - Заряд плазмы - Возьмите улучшенный, самими Адептус Механикус, плазменный пистолет и испепелите врагов Императора. Урон {damageCharge}");
+            Console.WriteLine($"{CommandEmperorLight} - Возниси молитву Ему и спаси свою душу от ужаса варпа. Исцеление {healingLight}");
+            Console.WriteLine($"{CommandOrbitalBombardment} - Экстерминатус. Урон {damageOrbitalBombardment}");
 
-            while (isStartGame)
+            while (healthForceCommander > 0 && healthHeretic > 0)
             {
                 Console.WriteLine("Нанесите удар");
                 spell = Console.ReadLine();
@@ -83,7 +81,7 @@
                         break;
                     case CommandOrbitalBombardment:
 
-                        if (healthForceCommander > zeroHp && healthForceCommander < minimumHp)
+                        if (healthForceCommander > 0 && healthForceCommander < minimumHp)
                         {
                             healthHeretic -= damageOrbitalBombardment;
                             healthForceCommander -= damageOrbitalBombardment;
@@ -98,22 +96,18 @@
 
                         break;
                 }
-
-                if (healthHeretic < zeroHp)
-                {
-                    Console.WriteLine("Жалкий еретик отправлен обратно в варп во имя Императора!");
-                    isStartGame = false;
-                }
-                else if (healthForceCommander < zeroHp || manaForceCommander < zeroHp)
-                {
-                    Console.WriteLine("Император покинул вас");
-                    isStartGame = false;
-                }
-                else if (healthForceCommander < zeroHp && healthHeretic < zeroHp)
-                {
-                    Console.WriteLine("Эта битва закончилась, будут еще друие, но без наших героев.");
-                    isStartGame = false;
-                }
+            }
+            if (healthHeretic < 0)
+            {
+                Console.WriteLine("Жалкий еретик отправлен обратно в варп во имя Императора!");
+            }
+            else if (healthForceCommander < 0 || manaForceCommander < 0)
+            {
+                Console.WriteLine("Император покинул вас");
+            }
+            else if (healthForceCommander < 0 && healthHeretic < 0)
+            {
+                Console.WriteLine("Эта битва закончилась, будут еще другие, но без наших героев.");
             }
         }
     }
