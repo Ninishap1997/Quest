@@ -1,0 +1,22 @@
+﻿string userInput;
+ushort scale;
+long value;
+ulong nameOfBook;
+bool redOrBlue;
+int userOutput;
+uint temperature;
+float solvingTheEquation;
+double paragraph;
+decimal money;
+char symbolOfFreedom;
+
+userInput = "";
+scale = 10;
+value = -36587455656565;
+nameOfBook = 2000000;
+redOrBlue = false;
+userOutput = -369;
+temperature = 45233;
+solvingTheEquation = 5.6f;
+money = 458632.659m;
+symbolOfFreedom = ';';
