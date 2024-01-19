@@ -2,6 +2,8 @@
 int age;
 string placeOfWork;
 bool isMarried;
+string inputMarriedYes = "да";
+string inputMarriedNo = "нет";
 
 Console.WriteLine("Как Вас зовут?");
 userName = Console.ReadLine();
@@ -16,8 +18,8 @@ while (!int.TryParse(Console.ReadLine(), out age))
 Console.WriteLine("Где вы работаете?");
 placeOfWork = Console.ReadLine();
 
-Console.WriteLine("Вы состоите в браке? Если да - напишите 'да', если нет - напишите 'нет'");
-isMarried = Console.ReadLine().ToLower() == "да";
+Console.WriteLine($"Вы состоите в браке? Если да - напишите {inputMarriedYes}, если нет - напишите {inputMarriedNo}'");
+isMarried = Console.ReadLine().ToLower() == inputMarriedYes;
 
 if (isMarried)
 {
