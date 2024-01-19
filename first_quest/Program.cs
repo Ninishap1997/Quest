@@ -2,7 +2,7 @@
 ushort scale;
 long value;
 ulong nameOfBook;
-bool redOrBlue;
+bool isRed;
 int userOutput;
 uint temperature;
 float solvingTheEquation;
@@ -14,7 +14,7 @@ userInput = "";
 scale = 10;
 value = -36587455656565;
 nameOfBook = 2000000;
-redOrBlue = false;
+isRed = false;
 userOutput = -369;
 temperature = 45233;
 solvingTheEquation = 5.6f;
