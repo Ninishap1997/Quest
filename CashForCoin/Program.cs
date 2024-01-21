@@ -7,7 +7,7 @@
         {
             Random random = new Random();
             int gold = random.Next();
-            int crystalPirce = 2;
+            int crystalPirce = 3;
 
             Console.WriteLine($"Золота в инвентаре: {gold}");
             Console.WriteLine("Чтобы приобрести товар, вам необходимо обменять золото на кристаллы");
