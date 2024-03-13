@@ -7,7 +7,7 @@
             int waitingTimePatient = 10;
             int minutesInHour = 60;
 
-            Console.WriteLine("Рассчет времени просиживания штанов");
+            Console.WriteLine("Рассчетное время высадки");
             Console.WriteLine("Сколько перед Вами человек?");
 
             string persons = Console.ReadLine();
